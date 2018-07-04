@@ -44,6 +44,8 @@ public class TranslateAction extends AnAction {
                     TransBean transResult = gson.fromJson(result,TransBean.class);
                     System.out.println(transResult);
                     showPopupBalloon(mEditor,selectedText+transResult.toString());
+                }else{
+                    showPopupBalloon(mEditor,msg);
                 }
             }
         });
